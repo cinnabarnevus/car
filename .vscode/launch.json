@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "h:/项目工程＋用户手册＋学习资料＋视频讲解/2025-3-23更新--FreeRTOS版Bootloader程序/Free_bootloader_v1.1/HARDWARE/SPI",
+      "program": "h:/项目工程＋用户手册＋学习资料＋视频讲解/2025-3-23更新--FreeRTOS版Bootloader程序/Free_bootloader_v1.1/HARDWARE/SPI/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
