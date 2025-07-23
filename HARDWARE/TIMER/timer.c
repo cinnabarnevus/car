@@ -85,7 +85,7 @@ void TIM3_PWM_Init(u16 arr,u16 psc)
 
 
 
-//以下是定时器1的输入捕获用于计算us105的距离，PB6
+//以下是定时器1的输入捕获用于计算us105的距离，PA8
 /*由于us-015返回的最长高电平时间为80ms，因此在此处并没有开启TIM1的定时器中断，
 因为此处不考虑溢出情况，只需要考虑计数频率的问题--不甘心的咸鱼注*/
 TIM_ICInitTypeDef  TIM1_ICInitStructure;

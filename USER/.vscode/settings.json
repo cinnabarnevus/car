@@ -85,6 +85,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "us105.h": "c"
+    "us105.h": "c",
+    "stm32f10x.h": "c"
   }
 }

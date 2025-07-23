@@ -1,3 +1,11 @@
+/*
+ * @Author: zjw cinnabar.nevus@gmail.com
+ * @Date: 2025-06-19 19:47:33
+ * @LastEditors: zjw cinnabar.nevus@gmail.com
+ * @LastEditTime: 2025-07-18 20:34:09
+ * @FilePath: \USERh:\项目工程＋用户手册＋学习资料＋视频讲解\2025-3-23更新--FreeRTOS版Bootloader程序\Free_bootloader_v1.1\HARDWARE\KEY\key.h
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 #ifndef __KEY_H
 #define __KEY_H	 
 #include "sys.h"

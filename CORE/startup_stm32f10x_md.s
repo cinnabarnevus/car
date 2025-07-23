@@ -128,8 +128,8 @@ __Vectors_Size  EQU  __Vectors_End - __Vectors
 ; Reset handler
 Reset_Handler    PROC;PROC代表函数的开始
                  EXPORT  Reset_Handler             [WEAK];EXPORT表示导出，可以被其他文件引用，import代表引入
-     IMPORT  __main;程序入口，负责c语言环境设置，初始化全局变量等，并且调用main函数
-     IMPORT  SystemInit;系统时钟初始化
+                 IMPORT  __main;程序入口，负责c语言环境设置，初始化全局变量等，并且调用main函数
+                 IMPORT  SystemInit;系统时钟初始化
                  LDR     R0, =SystemInit
                  BLX     R0;BLX是B和LR的结合，所以跳转后返回，返回到下一条指令，这里代表先跳转去初始化时钟
                  LDR     R0, =__main;这里就返回回来了，装入程序入口点
@@ -293,9 +293,9 @@ USBWakeUp_IRQHandler
 __user_initial_stackheap
 
                  LDR     R0, =  Heap_Mem
-                 LDR     R1, =(Stack_Mem + Stack_Size)
-                 LDR     R2, = (Heap_Mem +  Heap_Size)
-                 LDR     R3, = Stack_Mem
+                 LDR     R1, =  (Stack_Mem + Stack_Size)
+                 LDR     R2, =  (Heap_Mem +  Heap_Size)
+                 LDR     R3, =  Stack_Mem
                  BX      LR
 
                  ALIGN
