@@ -486,9 +486,9 @@ ARM Macro Assembler    Page 8
   293 0000001C         __user_initial_stackheap
   294 0000001C         
   295 0000001C 4804            LDR              R0, =  Heap_Mem
-  296 0000001E 4905            LDR              R1, =(Stack_Mem + Stack_Size)
-  297 00000020 4A05            LDR              R2, = (Heap_Mem +  Heap_Size)
-  298 00000022 4B06            LDR              R3, = Stack_Mem
+  296 0000001E 4905            LDR              R1, =  (Stack_Mem + Stack_Size)
+  297 00000020 4A05            LDR              R2, =  (Heap_Mem +  Heap_Size)
+  298 00000022 4B06            LDR              R3, =  Stack_Mem
   299 00000024 4770            BX               LR
   300 00000026         
   301 00000026 00 00           ALIGN

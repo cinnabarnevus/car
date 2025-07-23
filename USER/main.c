@@ -1,8 +1,8 @@
 /*
  * @Author: cinnabarnevus cinnabar.nevus@gmail.com
  * @Date: 2025-06-19 19:47:35
- * @LastEditors: cinnabarnevus cinnabar.nevus@gmail.com
- * @LastEditTime: 2025-07-05 23:04:46
+ * @LastEditors: zjw cinnabar.nevus@gmail.com
+ * @LastEditTime: 2025-07-18 19:32:12
  * @FilePath: \USER\main.c
  * @Description: ÕâÊÇÄ¬ÈÏÉèÖÃ,ÇëÉèÖÃ`customMade`, ´ò¿ªkoroFileHeader²é¿´ÅäÖÃ ½øĞĞÉèÖÃ: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -417,9 +417,9 @@ void EXTI15_10_IRQHandler(void)//Íâ²¿ÖĞ¶ÏPB12,PC14ÓÃÓÚ¿ØÖÆµç»ú·´×ª/µç»ú×ªËÙ¼ÆÊı
 	/*PC14¿ØÖÆµç»ú×ªËÙ¼ÆÊı*/
 	if(EXTI_GetITStatus(EXTI_Line14)!=RESET)
 	{
-		// if(KEY2==0)
-		// 	rate++;
-		led_on(&led1);
+		if(KEY2==0)
+			rate++;
+		//led_on(&led1);
 		EXTI_ClearITPendingBit(EXTI_Line14);
 	}
 		/* Èç¹ûĞèÒªµÄ»°½øĞĞÒ»´ÎÈÎÎñÇĞ»» */
@@ -434,7 +434,7 @@ void TIM2_IRQHandler(void)//¶¨Ê±Æ÷ÖĞ¶Ïº¯Êı£¬¶¨Ê±1s¼ÆËã´ËÊ±µÄ×ªËÙ,ĞèÒª×¢ÒâµÄÊÇÖĞ¶
 	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) //¼ì²é TIM2 ¸üĞÂÖĞ¶Ï·¢ÉúÓë·ñ
 	{
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update ); //Çå³ı TIM2 ¸üĞÂÖĞ¶Ï±êÖ¾
-		//led_on(&led1);/*µ÷ÊÔÓÃ*/
+		led_on(&led1);/*µ÷ÊÔÓÃ*/
 		xSemaphoreGiveFromISR(sig3, &xHigherPriorityTaskWoken);/*ÊÍ·Å¶şÖµĞÅºÅÁ¿*/
 	}
 	/* Èç¹ûĞèÒªµÄ»°½øĞĞÒ»´ÎÈÎÎñÇĞ»» */
